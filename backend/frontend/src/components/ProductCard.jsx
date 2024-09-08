@@ -4,8 +4,8 @@ import halfStar from '../assets/images/half.png';
 
 export default function ProductCard({ name, img, description, price, hidden }) {
     return (
-        <div className={`${hidden ? 'sm:hidden' : ''} sm:h-[368px] h:[240px] w-[165px] sm:w-[248px]`}>
-            <div className='rounded-2xl flex items-center justify-center bg-secondary w-[165px] h-[190px] sm:w-[248px] sm:h-[216px]'>
+        <div className={`${hidden ? 'sm:hidden' : ''} sm:h-[368px] h:[240px] sam:w-[150px] iphone:w-[165px] sm:w-[248px]`}>
+            <div className='rounded-2xl flex items-center justify-center bg-secondary sam:w-[150px] iphone:w-[165px] h-[190px] sm:w-[248px] sm:h-[216px]'>
                 <img
                     className='w-[70%] hover:scale-125 transition-transform duration-300 ease-in-out'
                     src={img}

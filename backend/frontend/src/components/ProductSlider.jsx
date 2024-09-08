@@ -48,7 +48,7 @@ export default function ProductSlider() {
                 unmountOnExit
             >
                 <div className='flex justify-center'>
-                    <TransitionGroup className='flex flex-wrap iphone:w-[85%] sam:w-[95%] iphone:gap-6 sam:gap-2 md:w-full md:justify-between'>
+                    <TransitionGroup className='flex flex-wrap iphone:w-[85%] sam:w-[90%] sam:ml-3 iphone:gap-6 sam:gap-2 md:w-full md:justify-between'>
                         {currentItems.map(product => (
                             <CSSTransition
                                 key={product.id}
@@ -64,7 +64,7 @@ export default function ProductSlider() {
             </CSSTransition>
 
             {/* Pagination Controls */}
-            <div className='flex mt-10 w-[100%] lg:justify-end'>
+            <div className='flex mt-10 mx-2 w-[100%] lg:justify-end'>
                 <div className='lg:w-[56%] w-full'>
                     <div className='flex justify-between'>
                         <div className='flex gap-1 items-center'>
