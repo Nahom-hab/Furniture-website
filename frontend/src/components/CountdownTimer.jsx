@@ -1,0 +1,77 @@
+import React, { useState, useEffect } from 'react';
+import { MdTimer } from 'react-icons/md';
+import img from '../assets/couch.png'
+import { MdArrowForward } from 'react-icons/md'; // Impor
+
+
+export default function CountdownTimer() {
+    const targetDate = new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000);  // 3 days from now
+
+    const calculateTimeLeft = () => {
+        const now = new Date();
+        const difference = targetDate - now;
+
+        let timeLeft = {};
+
+        if (difference > 0) {
+            timeLeft = {
+                Days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                Hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                Mins: Math.floor((difference / 1000 / 60) % 60),
+                Secs: Math.floor((difference / 1000) % 60),
+            };
+        }
+
+        return timeLeft;
+    };
+
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+
+        return () => clearInterval(timer); // Clear the interval on unmount
+    }, []);
+
+    // Animation for digits
+    const animateClass = 'transition-transform transform duration-500 ease-in-out';
+
+    return (
+        <div className=' w-[50%] bg-secondary rounded-2xl p-10 pb-2 text-black'>
+            <div className='text-[28px] font-bold'>Super Sale!</div>
+            <div className='flex justify-between'>
+                <div className='text-gray-700 text-[16px]'>Get 50% OFF limited time offer</div>
+                <div className='flex flex-col items-end'>
+                    <div className='text-[10px] text-gray-700 line-through'>12000 birr</div>
+                    <div className='font-bold   text-gray-700 mt-[-5px] text-xl'>5000 <span className='text-md text-gray-700'>birr</span></div>
+                </div>
+            </div>
+            <div className='flex text-[12px]   items-center'><MdTimer /> end time</div>
+            <div className="flex flex-col text-black ">
+                <div className="flex space-x-4">
+                    {Object.keys(timeLeft).map((interval, index) => (
+                        <div key={index} className="flex gap-1  items-center">
+                            <div className='flex flex-col items-center'>
+                                <div className={`text-3xl font-bold ${animateClass}`}>
+                                    {timeLeft[interval] || 0}
+                                </div>
+                                <div className="text-sm">{interval}</div>
+                            </div>
+                            {interval === 'Secs' ? ('') : (<div className='text-3xl font-pregular'>:</div>)}
+
+
+                        </div>
+                    ))}
+                </div>
+                <div className='flex justify-between'>
+                    <img className='w-[60%]' src={img} alt="" />
+                    <button className='bg-[#a8aa92] px-6 h-fit mt-16  flex items-center gap-2  text-black rounded-2xl py-2'>View All <MdArrowForward /></button>
+
+                </div>
+
+            </div></div>
+
+    );
+}
