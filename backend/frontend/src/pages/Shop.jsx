@@ -16,18 +16,18 @@ export default function Shop() {
 
     return (
         <div className='mt-10'>
-            <div className='lg:p-[11%] p-[2%]  w-fit  lg:pt-0'>
+            <div className='lg:p-[11%] p-0   w-fit  lg:pt-0'>
                 <Products />
                 <div className='flex  flex-wrap mt-20 justify-between'>
                     <CountdownTimer />
-                    <div className='flex justify-center w-full gap-[13px]  items-center iphone:gap-6'>
+                    <div className='flex justify-center w-full gap-[8px]   items-center iphone:gap-6'>
                         <ProductCard img={product3} name={'Sleek Bar Stool'} price={12000} discription={'Add a touch of sophistication with modern bar stools.'} />
                         <ProductCard img={product2} name={'Sleek Bar Stool'} price={12000} discription={'Add a touch of sophistication with modern bar stools.'} />
                     </div>
                 </div>
                 <ProductSlider />
             </div>
-            <div className='lg:p-[11%] p-[6%] pb-10 mb-5 bg-third pt-10  '>
+            <div className='md:p-[11%] p-[6%] pb-10 mb-5 bg-third pt-10  '>
                 <div className=''>
                     <div className='text-4xl text-black font-semibold'>Our Best Selling Products</div>
                     <div className='flex justify-between iphone:px-[6%] mt-10 flex-wrap'>

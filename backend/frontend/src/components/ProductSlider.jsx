@@ -39,7 +39,7 @@ export default function ProductSlider() {
     const pages = Array.from({ length: totalPages }, (_, index) => index);
 
     return (
-        <div className='flex flex-col mb-10 mt-5'>
+        <div className='flex flex-col justify-center  mb-10 mt-5'>
             {/* Product Cards with Fade Animation */}
             <CSSTransition
                 in={inProp}
@@ -47,17 +47,20 @@ export default function ProductSlider() {
                 classNames="fade"
                 unmountOnExit
             >
-                <TransitionGroup className='flex flex-wrap iphone:px-[6%] justify-between'>
-                    {currentItems.map(product => (
-                        <CSSTransition
-                            key={product.id}
-                            timeout={300}
-                            classNames="fade"
-                        >
-                            <ProductCard img={product.img} name={product.name} price={product.price} description={product.description} />
-                        </CSSTransition>
-                    ))}
-                </TransitionGroup>
+                <div className='flex justify-center'>
+                    <TransitionGroup className='flex flex-wrap iphone:w-[85%] sam:w-[95%] iphone:gap-6 sam:gap-2 md:w-full md:justify-between'>
+                        {currentItems.map(product => (
+                            <CSSTransition
+                                key={product.id}
+                                timeout={300}
+                                classNames="fade"
+                            >
+                                <ProductCard img={product.img} name={product.name} price={product.price} description={product.description} />
+                            </CSSTransition>
+                        ))}
+                    </TransitionGroup>
+                </div>
+
             </CSSTransition>
 
             {/* Pagination Controls */}
