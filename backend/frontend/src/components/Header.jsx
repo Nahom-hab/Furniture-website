@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom'; // Import NavLink for navigation
 import { MdMenu, MdClose } from 'react-icons/md'; // Import hamburger menu and close icons
-import img1 from '../assets/image2.png';
-import img2 from '../assets/image3.png';
-import img3 from '../assets/image4.png';
-import person from '../assets/person.jpg';
+import img1 from '../assets/images/image2.png';
+import img2 from '../assets/images/image3.png';
+import img3 from '../assets/images/image4.png';
+import person from '../assets/images/person.jpg';
 
 export default function Header() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to handle sidebar visibility
@@ -21,7 +21,7 @@ export default function Header() {
 
             <div className='flex items-center gap-32'>
                 {/* Desktop Navigation Links */}
-                <div className='lg:flex hidden gap-8'>
+                <div className='lg:flex items-center hidden gap-8'>
                     <NavLink to="/" end className={({ isActive }) => `${linkStyle} ${isActive ? activeStyle : ''}`}>
                         Home
                     </NavLink>
@@ -61,7 +61,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-
 
             {/* Sidebar (Mobile Navigation) */}
             <div

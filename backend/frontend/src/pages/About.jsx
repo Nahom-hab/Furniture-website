@@ -1,6 +1,6 @@
 import React from 'react';
 import { MdArrowForward } from 'react-icons/md';
-import aboutImage from '../assets/shop.jpeg'; // Replace with your smaller about image
+import aboutImage from '../assets/images/shop.jpeg'; // Replace with your smaller about image
 import Footer from '../components/Footer';
 
 export default function About() {

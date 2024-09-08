@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import img2 from '../assets/img1.jpeg';
-import img3 from '../assets/img2.jpeg';
-import img4 from '../assets/img3.jpeg';
-import img5 from '../assets/img4.jpeg';
+import img2 from '../assets/images/img1.jpeg';
+import img3 from '../assets/images/img2.jpeg';
+import img4 from '../assets/images/img3.jpeg';
+import img5 from '../assets/images/img4.jpeg';
 
 export default function TestimonialSlider() {
     const testimonials = [

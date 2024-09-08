@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { MdShoppingCart } from 'react-icons/md';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
-import product2 from '../assets/product-2.png';
-import product3 from '../assets/product-3.png';
+import product2 from '../assets/images/product-2.png';
+import product3 from '../assets/images/product-3.png';
 import Footer from '../components/Footer';
 
 

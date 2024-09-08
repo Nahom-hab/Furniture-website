@@ -1,18 +1,18 @@
 import React from 'react';
 import { MdArrowForward } from 'react-icons/md'; // Impor
 
-import homeimg from '../assets/home.jpeg';
-import homePhone from '../assets/homePhone.jpeg';
+import homeimg from '../assets/images/home.jpeg';
+import homePhone from '../assets/images/homePhone.jpeg';
 
-import couch from '../assets/p2.png';
-import product2 from '../assets/product-2.png';
-import product3 from '../assets/product-3.png';
-import home3 from '../assets/home3.jpg';
-import img1 from '../assets/couch.png';
-import shipingBag from '../assets/shopping-bag.png';
-import car from '../assets/fast-delivery.png';
-import customers from '../assets/customers.png';
-import moneyba from '../assets/moneyba.png';
+import couch from '../assets/images/p2.png';
+import product2 from '../assets/images/product-2.png';
+import product3 from '../assets/images/product-3.png';
+import home3 from '../assets/images/home3.jpg';
+import img1 from '../assets/images/couch.png';
+import shipingBag from '../assets/images/shopping-bag.png';
+import car from '../assets/images/fast-delivery.png';
+import customers from '../assets/images/customers.png';
+import moneyba from '../assets/images/moneyba.png';
 import ProductCard from '../components/ProductCard';
 import ProductCardType from '../components/ProductCardType2';
 import ImageSlider from '../components/imageSlider';

@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'iphone': '430px',
+        'sam': '360px'
+      },
       colors: {
         primary: "#C8C3A7",
         secondary: {

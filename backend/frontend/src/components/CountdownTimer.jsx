@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MdTimer } from 'react-icons/md';
-import img from '../assets/couch.png'
+import img from '../assets/images/couch.png'
 import { MdArrowForward } from 'react-icons/md'; // Impor
 
 
@@ -47,7 +47,7 @@ export default function CountdownTimer() {
                     <div className='font-bold   text-gray-700 mt-[-5px] lg:text-xl whitespace-nowrap  text-md'>5000 <span className='text-md text-gray-700'>birr</span></div>
                 </div>
             </div>
-            <div className='text-gray-700 text-[16px]'>Get 50% OFF limited time offer</div>
+            <div className='text-gray-700 text-[16px]'>Get <span className='text-red-600 font-bold text-[20px]'>50% OFF</span>  limited time offer</div>
 
             <div className='flex text-[12px]   items-center'><MdTimer /> end time</div>
             <div className="flex flex-col text-black ">
@@ -55,7 +55,7 @@ export default function CountdownTimer() {
                     {Object.keys(timeLeft).map((interval, index) => (
                         <div key={index} className="flex gap-1  items-center">
                             <div className='flex flex-col items-center'>
-                                <div className={`text-3xl font-bold ${animateClass}`}>
+                                <div className={`text-3xl text-green-700 font-bold ${animateClass}`}>
                                     {timeLeft[interval] || 0}
                                 </div>
                                 <div className="text-sm">{interval}</div>
