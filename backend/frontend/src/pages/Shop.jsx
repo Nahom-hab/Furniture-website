@@ -1,12 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Footer from '../components/Footer'
 import CountdownTimer from '../components/CountdownTimer';
 import ProductCard from '../components/ProductCard';
 import product2 from '../assets/images/product-2.png';
 import product3 from '../assets/images/product-3.png';
-import nav from '../assets/images/nav1.png';
-import nav_sel from '../assets/images/nav-sel.png';
-import { MdArrowBack, MdArrowForward, MdForward } from 'react-icons/md';
 import MostProductcCard from '../components/MostProductcCard';
 import shop from '../assets/images/shop.jpeg'
 import Products from '../components/ShopProducts';

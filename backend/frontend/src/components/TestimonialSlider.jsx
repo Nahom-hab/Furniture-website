@@ -10,21 +10,18 @@ export default function TestimonialSlider() {
             image: img2,
             name: 'Angla Yu',
             description: `I recently bought a dining table set from this shop, and it’s stunning. 
-              The quality is excellent, and the service was top-notch from start to finish. 
               Highly recommend this shop`
         },
         {
             image: img3,
             name: 'John Doe',
             description: `The sofa I purchased is not only beautiful but also very comfortable. 
-              Great experience overall!and the service was top-notch from start to finish. 
               Highly recommend this shop`
         },
         {
             image: img4,
             name: 'Jane Smith',
             description: `Fantastic customer service and high-quality products. 
-              I’ll definitely return for more!and the service was top-notch from start to finish. 
               Highly recommend this shopand the service was top-notch from start to finish. 
              `
         },
@@ -32,8 +29,6 @@ export default function TestimonialSlider() {
             image: img5,
             name: 'Mark Lee',
             description: `I appreciate the attention to detail in my recent order. 
-              Highly recommend this shop!and the service was top-notch from start to finish. 
-              I couldn’t be happier with my purchase!I appreciate the attention to detail in my recent order. 
               I couldn’t be happier with my purchase!`
         }
     ];

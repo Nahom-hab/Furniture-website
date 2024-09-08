@@ -14,7 +14,7 @@ import car from '../assets/images/fast-delivery.png';
 import customers from '../assets/images/customers.png';
 import moneyba from '../assets/images/moneyba.png';
 import ProductCard from '../components/ProductCard';
-import ProductCardType from '../components/ProductCardType2';
+import ProductCardType from '../components/ProductType';
 import ImageSlider from '../components/imageSlider';
 import TestimonialSlider from '../components/TestimonialSlider';
 import Footer from '../components/Footer';

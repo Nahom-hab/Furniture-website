@@ -3,7 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import img1 from '../assets/images/couch.png';
 import nav from '../assets/images/nav1.png';
 import nav_sel from '../assets/images/nav-sel.png';
-import ProductCardType from '../components/ProductCardType2';
+import ProductCardType from './ProductType';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
 import Productdata from '../assets/data/data';
 

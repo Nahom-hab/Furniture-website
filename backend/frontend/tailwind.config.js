@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'iphone': '430px',
+        'iphone': '390px',
         'sam': '360px'
       },
       colors: {
