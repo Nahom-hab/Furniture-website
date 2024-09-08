@@ -20,12 +20,12 @@ export default function Shop() {
     return (
         <div className='mt-10'>
             <div className='p-[11%]  pt-0'>
-                <div className='flex font-pbold  text-black gap-6'>
-                    <div className={`${Selected === 0 ? 'border-b-2 border-black' : ''}`} onClick={() => setSelected(0)}>Dining room</div>
-                    <div className={`${Selected === 1 ? 'border-b-2 border-black' : ''}`} onClick={() => setSelected(1)}>Living Room</div>
-                    <div className={`${Selected === 2 ? 'border-b-2 border-black' : ''}`} onClick={() => setSelected(2)}>OutDoor</div>
-                    <div className={`${Selected === 3 ? 'border-b-2 border-black' : ''}`} onClick={() => setSelected(3)}>Kitchen</div>
-                    <div className={`${Selected === 4 ? 'border-b-2 border-black' : ''}`} onClick={() => setSelected(4)}>Bed Room</div>
+                <div className='flex font-pbold  text-black gap-3'>
+                    <div className={`${Selected === 0 ? 'border-b-2 border-black' : ''} lg:text-lg text-sm whitespace-nowrap `} onClick={() => setSelected(0)}>Dining room</div>
+                    <div className={`${Selected === 1 ? 'border-b-2 border-black' : ''} lg:text-lg text-sm whitespace-nowrap `} onClick={() => setSelected(1)}>Living Room</div>
+                    <div className={`${Selected === 2 ? 'border-b-2 border-black' : ''} lg:text-lg text-sm whitespace-nowrap `} onClick={() => setSelected(2)}>OutDoor</div>
+                    <div className={`${Selected === 3 ? 'border-b-2 border-black' : ''} lg:text-lg text-sm whitespace-nowrap `} onClick={() => setSelected(3)}>Kitchen</div>
+                    <div className={`${Selected === 4 ? 'border-b-2 border-black' : ''} lg:text-lg text-sm whitespace-nowrap `} onClick={() => setSelected(4)}>Bed Room</div>
                 </div>
                 <div className='flex mt-6 justify-between flex-wrap'>
                     <ProductCardType name={'Gray Brown Couch'} img={img1} price={6000} />
@@ -35,8 +35,8 @@ export default function Shop() {
                     <ProductCardType name={'Gray Brown Couch'} img={img1} price={6000} />
                     <ProductCardType name={'Gray Brown Couch'} img={img1} price={6000} />
                 </div>
-                <div className='flex justify-end'>
-                    <div className='w-[53%] '>
+                <div className='flex  lg:justify-end'>
+                    <div className='lg:w-[53%] w-full'>
                         <div className='flex justify-between'>
                             <div className='flex gap-1 items-center'>
                                 <img src={nav} alt="" />
@@ -52,7 +52,7 @@ export default function Shop() {
                     </div>
 
                 </div>
-                <div className='flex mt-20 justify-between'>
+                <div className='flex flex-wrap mt-20 justify-between'>
                     <CountdownTimer />
                     <ProductCard img={product3} name={'Sleek Bar Stool'} price={12000} discription={'Add a touch of sophistication with modern bar stools.'} />
                     <ProductCard img={product2} name={'Sleek Bar Stool'} price={12000} discription={'Add a touch of sophistication with modern bar stools.'} />
@@ -69,8 +69,8 @@ export default function Shop() {
                     <ProductCard img={product3} name={'Sleek Bar Stool'} price={12000} discription={'Add a touch of sophistication with modern bar stools.'} />
                     <ProductCard img={product2} name={'Sleek Bar Stool'} price={12000} discription={'Add a touch of sophistication with modern bar stools.'} />
                 </div>
-                <div className='flex  mt-10 justify-end'>
-                    <div className='w-[53%] '>
+                <div className='flex mt-10  lg:justify-end'>
+                    <div className='lg:w-[53%] w-full'>
                         <div className='flex justify-between'>
                             <div className='flex gap-1 items-center'>
                                 <img src={nav} alt="" />
@@ -91,7 +91,7 @@ export default function Shop() {
 
 
             </div>
-            <div className='p-[11%] pb-10 mb-5 bg-third pt-10  '>
+            <div className='lg:p-[11%] p-[4%] pb-10 mb-5 bg-third pt-10  '>
                 <div className=''>
                     <div className='text-4xl text-black font-semibold'>Our Best Selling Products</div>
                     <div className='flex justify-between mt-10 flex-wrap'>

@@ -70,7 +70,7 @@ export default function TestimonialSlider() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="min-w-full flex items-center justify-center"
+                            className="min-w-full flex items-center ml-[2px] justify-center"
                         >
                             <div className='w-32 flex flex-col items-center'>
                                 <img

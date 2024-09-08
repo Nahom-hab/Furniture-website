@@ -39,15 +39,16 @@ export default function CountdownTimer() {
     const animateClass = 'transition-transform transform duration-500 ease-in-out';
 
     return (
-        <div className=' w-[50%] bg-secondary rounded-2xl p-10 pb-2 text-black'>
-            <div className='text-[28px] font-bold'>Super Sale!</div>
-            <div className='flex justify-between'>
-                <div className='text-gray-700 text-[16px]'>Get 50% OFF limited time offer</div>
+        <div className=' lg:w-[50%] bg-secondary mb-5 rounded-2xl p-10 pb-2 text-black'>
+            <div className='flex items-end mb-4 justify-between'>
+                <div className='text-[28px] font-bold'>Super Sale!</div>
                 <div className='flex flex-col items-end'>
                     <div className='text-[10px] text-gray-700 line-through'>12000 birr</div>
-                    <div className='font-bold   text-gray-700 mt-[-5px] text-xl'>5000 <span className='text-md text-gray-700'>birr</span></div>
+                    <div className='font-bold   text-gray-700 mt-[-5px] lg:text-xl whitespace-nowrap  text-md'>5000 <span className='text-md text-gray-700'>birr</span></div>
                 </div>
             </div>
+            <div className='text-gray-700 text-[16px]'>Get 50% OFF limited time offer</div>
+
             <div className='flex text-[12px]   items-center'><MdTimer /> end time</div>
             <div className="flex flex-col text-black ">
                 <div className="flex space-x-4">
@@ -65,9 +66,9 @@ export default function CountdownTimer() {
                         </div>
                     ))}
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex items-start justify-between'>
                     <img className='w-[60%]' src={img} alt="" />
-                    <button className='bg-[#a8aa92] px-6 h-fit mt-16  flex items-center gap-2  text-black rounded-2xl py-2'>View All <MdArrowForward /></button>
+                    <button className='bg-[#a8aa92] lg:px-6 px-2 h-fit mt-16  flex items-center gap-2 whitespace-nowrap  text-black rounded-2xl py-1 lg:py-2 '>View All <MdArrowForward /></button>
 
                 </div>
 

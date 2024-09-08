@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-// import Signup from './pages/Signup';
 import Home from './pages/home';
 import Shop from './pages/Shop';
 import Header from './components/Header';
 import Product from './pages/Product';
+import About from './pages/About';
+import ContactUs from './pages/ContactUs';
 
 
 export default function App() {
@@ -15,8 +16,9 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/shop' element={<Shop />}></Route>
+        <Route path='/aboutUs' element={<About />}></Route>
+        <Route path='/contactUs' element={<ContactUs />}></Route>
         <Route path='/product' element={<Product />}></Route>
-        {/* <Route path='/signup' element={<Signup />}></Route> */}
       </Routes>
     </BrowserRouter >
   )
