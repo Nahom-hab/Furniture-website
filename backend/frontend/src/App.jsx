@@ -22,9 +22,9 @@ export default function App() {
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path='/aboutUs' element={<About />}></Route>
         <Route path='/contactUs' element={<ContactUs />}></Route>
-        <Route path='/product' element={<Product />}></Route>
+        <Route path='/product/:id' element={<Product />}></Route>
       </Routes>
-    </BrowserRouter >
+    </BrowserRouter>
   )
 }
 

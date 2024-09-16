@@ -8,6 +8,8 @@ import path from 'path'
 import { fileURLToPath } from 'url';
 
 import authRouter from './routes/auth.route.js';
+import productRouter from './routes/product.route.js';
+
 import { app, server } from './socket/socket.js';
 
 // Load environment variables
@@ -37,6 +39,8 @@ app.use(express.json())
 
 // Routes
 app.use('/api/auth', authRouter);
+app.use('/api/product', productRouter);
+
 
 
 app.use(express.static(path.join(__dirname, '/frontend/dist')))

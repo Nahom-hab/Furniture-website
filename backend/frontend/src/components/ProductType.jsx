@@ -2,9 +2,9 @@ import React from 'react';
 import cart from '../assets/images/cart.png';
 import { Link } from 'react-router-dom';
 
-export default function ProductCardType({ name, img, price }) {
+export default function ProductCardType({ id, name, img, price }) {
     return (
-        <Link to={'/product'} className='mb-4'>
+        <Link to={`/product/${id}`} className='mb-4'>
             <div className='bg-secondary rounded-xl flex flex-col items-center justify-center w-[340px] h-[210px]'>
                 <span className='text-red-600 w-full pr-2 text-end font-bold'>50%OFF</span>
                 <img

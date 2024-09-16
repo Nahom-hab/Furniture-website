@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdArrowForward } from 'react-icons/md';
 import homeimg from '../assets/images/home.jpeg';
 import homePhone from '../assets/images/homePhone.jpeg';
@@ -20,6 +20,21 @@ import useLanguage from '../zustand/useConversationStore';
 
 export default function Home() {
     const { isEng } = useLanguage();
+    // const [products, setProducts] = useState([])
+    // useEffect(() => {
+    //     const fetchProduct = async () => {
+    //         try {
+    //             const res = await fetch('/api/product/')
+    //             if (res.ok) {
+    //                 const data = await res.json()
+    //                 setProducts(data)
+    //             }
+    //         } catch (error) {
+    //             console.log(error.message);
+    //         }
+    //     }
+    //     fetchProduct()
+    // })
 
     return (
         <div>
@@ -27,7 +42,7 @@ export default function Home() {
                 <img src={homeimg} className='w-full sm:block hidden mt-8 rounded-3xl' alt="" />
                 <img src={homePhone} className='w-full sm:hidden block mt-8' alt="" />
 
-                <h1 className='sm:flex text-gray-800 sm:mt-0 mt-10 text-5xl iphone:text-7xl font-bold items-center relative bottom-[430px] iphone:bottom-[550px] flex-col justify-center'>
+                <h1 className='sm:flex text-gray-800 sm:mt-0 mt-10 text-4xl md:text-5xl font-bold items-center relative bottom-[430px] iphone:bottom-[550px] flex-col justify-center'>
                     <div className='flex justify-center items-center flex-col'>
                         <span className='sm:flex text-center'>
                             <span>{isEng ? 'Discover your' : 'የእርስዎን'}</span>
@@ -100,9 +115,15 @@ export default function Home() {
                 <div className='mt-10'>
                     <h1 className='text-4xl mb-5 font-pextrabold text-black'>{isEng ? 'Our Products' : 'የእኛ ምርቶች'}</h1>
                     <div className='flex sm:justify-between justify-center flex-wrap'>
+                        {/* {products.map((product) => (
+                            <ProductCardType name={isEng ? product.name : product.nameAMH} id={product._id} img={product.images[0]} price={product.price} />
+
+                        ))} */}
+
                         <ProductCardType name={isEng ? 'Gray Brown Couch' : 'ግራይ ቡና ቦታ'} img={img1} price={6000} />
                         <ProductCardType name={isEng ? 'Gray Brown Couch' : 'ግራይ ቡና ቦታ'} img={img1} price={6000} />
                         <ProductCardType name={isEng ? 'Gray Brown Couch' : 'ግራይ ቡና ቦታ'} img={img1} price={6000} />
+
                         <ProductCardType name={isEng ? 'Gray Brown Couch' : 'ግራይ ቡና ቦታ'} img={img1} price={6000} />
                         <ProductCardType name={isEng ? 'Gray Brown Couch' : 'ግራይ ቡና ቦታ'} img={img1} price={6000} />
                         <ProductCardType name={isEng ? 'Gray Brown Couch' : 'ግራይ ቡና ቦታ'} img={img1} price={6000} />
@@ -124,7 +145,6 @@ export default function Home() {
                     <ImageSlider />
                 </div>
             </div>
-
             <div className='p-[11%] pb-5 bg-secondary pt-0'>
                 <div className='flex mt-20 flex-wrap sm:pt-0 pt-10 justify-between items-center'>
                     <div className='sm:w-[40%] text-black'>
