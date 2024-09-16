@@ -5,8 +5,10 @@ import ProductCard from './ProductCard'; // Import your ProductCard component
 import nav from '../assets/images/nav1.png';
 import nav_sel from '../assets/images/nav-sel.png';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
+import useLanguage from '../zustand/useConversationStore';
 
 export default function ProductSlider() {
+    const { isEng } = useLanguage();
     const [currentPage, setCurrentPage] = useState(0);
     const itemsPerPage = 8; // Number of items per page
     const totalPages = Math.ceil(sliderData.length / itemsPerPage);
@@ -39,7 +41,7 @@ export default function ProductSlider() {
     const pages = Array.from({ length: totalPages }, (_, index) => index);
 
     return (
-        <div className='flex flex-col justify-center  mb-10 mt-5'>
+        <div className='flex flex-col justify-center items-center p-2 border-black w-fit mb-10 mt-5'>
             {/* Product Cards with Fade Animation */}
             <CSSTransition
                 in={inProp}
@@ -47,20 +49,24 @@ export default function ProductSlider() {
                 classNames="fade"
                 unmountOnExit
             >
-                <div className='flex justify-center'>
-                    <TransitionGroup className='flex flex-wrap iphone:w-[85%] sam:w-[90%] sam:ml-3 iphone:gap-6 sam:gap-2 md:w-full md:justify-between'>
+                <div className='flex w-fit justify-center'>
+                    <TransitionGroup className='flex flex-wrap sam:w-[330px] md:w-full iphone:w-[350px] justify-between'>
                         {currentItems.map(product => (
                             <CSSTransition
                                 key={product.id}
                                 timeout={300}
                                 classNames="fade"
                             >
-                                <ProductCard img={product.img} name={product.name} price={product.price} description={product.description} />
+                                <ProductCard
+                                    img={product.img}
+                                    name={product.name}
+                                    price={product.price}
+                                    description={product.description}
+                                />
                             </CSSTransition>
                         ))}
                     </TransitionGroup>
                 </div>
-
             </CSSTransition>
 
             {/* Pagination Controls */}
@@ -91,12 +97,14 @@ export default function ProductSlider() {
                                 disabled={currentPage === 0}
                             >
                                 <MdArrowBack />
+                                {isEng ? ' Back' : ' ወደ ኋላ'}
                             </button>
                             <button
                                 className='bg-secondary px-4 text-2xl py-2 rounded-2xl text-white'
                                 onClick={handleNext}
                                 disabled={(currentPage + 1) === totalPages}
                             >
+                                {isEng ? 'Next' : ' አዳዲስ'}
                                 <MdArrowForward />
                             </button>
                         </div>

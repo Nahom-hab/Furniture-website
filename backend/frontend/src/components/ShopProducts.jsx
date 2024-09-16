@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import img1 from '../assets/images/couch.png';
 import nav from '../assets/images/nav1.png';
 import nav_sel from '../assets/images/nav-sel.png';
 import ProductCardType from './ProductType';
@@ -13,11 +12,14 @@ export default function Products() {
     const itemsPerPage = 6;
     const [inProp, setInProp] = useState(true);
 
+    // Define product types in English
+    const types = ['Dining Room', 'Living Room', 'Outdoor', 'Kitchen', 'Bedroom'];
+
+    // Amharic translations for product types
+    const amharicTypes = ['የገጽታ ክፍል', 'የእንግዳ ክፍል', 'የውስጥ ክፍል', 'የምግብ ክፍል', 'የእንቁላል ክፍል'];
+
     // Filter the products based on the selected type
-    const filteredData = Productdata.filter(product => {
-        const types = ['Dining Room', 'Living Room', 'Outdoor', 'Kitchen', 'Bedroom'];
-        return product.type === types[Selected];
-    });
+    const filteredData = Productdata.filter(product => product.type === types[Selected]);
 
     // Get the current items for the page
     const currentItems = filteredData.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
@@ -49,16 +51,16 @@ export default function Products() {
     };
 
     return (
-        <div className='flex justify-center items-center flex-col'>
+        <div className='flex justify-center items-center p-3 flex-col'>
             {/* Category Navigation */}
-            <div className='flex font-pbold text-black gap-3 mb-4'>
-                {['Dining Room', 'Living Room', 'Outdoor', 'Kitchen', 'Bedroom'].map((type, index) => (
+            <div className='flex font-pbold w-full text-black gap-3 mb-4'>
+                {types.map((type, index) => (
                     <div
                         key={index}
                         className={`${Selected === index ? 'border-b-2 border-black' : ''} lg:text-lg lg:mx-2 text-[12px] whitespace-nowrap cursor-pointer`}
                         onClick={() => { setSelected(index); setCurrentPage(0); }}
                     >
-                        {type}
+                        {amharicTypes[index]} {/* Display Amharic text */}
                     </div>
                 ))}
             </div>
@@ -70,7 +72,7 @@ export default function Products() {
                 classNames="fade"
                 unmountOnExit
             >
-                <TransitionGroup className='flex mt-6 md:justify-between justify-center  flex-wrap'>
+                <TransitionGroup className='flex mt-6 md:justify-between justify-center flex-wrap'>
                     {currentItems.map((product, index) => (
                         <CSSTransition
                             key={index}
@@ -105,12 +107,14 @@ export default function Products() {
                                 disabled={currentPage === 0}
                             >
                                 <MdArrowBack />
+                                ወደ ኋላ {/* Back in Amharic */}
                             </button>
                             <button
                                 className='bg-secondary px-4 text-2xl py-2 rounded-2xl text-white'
                                 onClick={handleNext}
                                 disabled={(currentPage + 1) === totalPages}
                             >
+                                አዳዲስ {/* Next in Amharic */}
                                 <MdArrowForward />
                             </button>
                         </div>

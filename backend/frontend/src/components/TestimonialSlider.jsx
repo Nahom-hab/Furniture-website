@@ -3,33 +3,47 @@ import img2 from '../assets/images/img1.jpeg';
 import img3 from '../assets/images/img2.jpeg';
 import img4 from '../assets/images/img3.jpeg';
 import img5 from '../assets/images/img4.jpeg';
+import useLanguage from '../zustand/useConversationStore';
 
 export default function TestimonialSlider() {
+    const { isEng } = useLanguage();
+
     const testimonials = [
         {
             image: img2,
-            name: 'Angla Yu',
-            description: `I recently bought a dining table set from this shop, and it’s stunning. 
-              Highly recommend this shop`
+            name: isEng ? 'Angla Yu' : 'አንግላ ዩ',
+            description: isEng
+                ? `I recently bought a dining table set from this shop, and it’s stunning. 
+                   Highly recommend this shop`
+                : `በዚህ ሱቅ የምግብ ጠረጴዛ እንደ ምርት ገና ገና ገና ተገዝተዋል። 
+                   ይህን ሱቅ በጣም እመነባለሁ`
         },
         {
             image: img3,
-            name: 'John Doe',
-            description: `The sofa I purchased is not only beautiful but also very comfortable. 
-              Highly recommend this shop`
+            name: isEng ? 'John Doe' : 'ጆርጅ ዶ',
+            description: isEng
+                ? `The sofa I purchased is not only beautiful but also very comfortable. 
+                   Highly recommend this shop`
+                : `በጣም ውብ የሆነ ሶፋ ገና ገና እንደ ምርት ተገዝተዋል። 
+                   ይህን ሱቅ በጣም እመነባለሁ`
         },
         {
             image: img4,
-            name: 'Jane Smith',
-            description: `Fantastic customer service and high-quality products. 
-              Highly recommend this shopand the service was top-notch from start to finish. 
-             `
+            name: isEng ? 'Jane Smith' : 'ጄን ስምይት',
+            description: isEng
+                ? `Fantastic customer service and high-quality products. 
+                   Highly recommend this shop and the service was top-notch from start to finish.`
+                : `የደንበኞች አገልግሎት እና የጥራት ምርቶች በጣም ግሩም ነበር። 
+                   ይህን ሱቅ በጣም እመነባለሁ`
         },
         {
             image: img5,
-            name: 'Mark Lee',
-            description: `I appreciate the attention to detail in my recent order. 
-              I couldn’t be happier with my purchase!`
+            name: isEng ? 'Mark Lee' : 'ማርክ ሊ',
+            description: isEng
+                ? `I appreciate the attention to detail in my recent order. 
+                   I couldn’t be happier with my purchase!`
+                : `እቅፍ የምን ዝርዝር ይገኛል። 
+                   ገና ገና ገና አልወድም!`
         }
     ];
 
@@ -73,7 +87,7 @@ export default function TestimonialSlider() {
                                     src={testimonial.image}
                                     alt={testimonial.name}
                                 />
-                                <div className="font-bold  text-black">{testimonial.name}</div>
+                                <div className="font-bold text-black">{testimonial.name}</div>
                             </div>
 
                             <p className="text-center mb-5 text-[14px] w-[90%] text-black">{testimonial.description}</p>
