@@ -42,7 +42,7 @@ export default function Home() {
                 <img src={homeimg} className='w-full sm:block hidden mt-8 rounded-3xl' alt="" />
                 <img src={homePhone} className='w-full sm:hidden block mt-8' alt="" />
 
-                <h1 className='sm:flex text-gray-800 sm:mt-0 mt-10 text-4xl md:text-5xl font-bold items-center relative bottom-[430px] iphone:bottom-[550px] flex-col justify-center'>
+                <h1 className='sm:flex text-gray-800 sm:mt-0 mt-10 text-5xl md:text-7xl font-bold items-center relative bottom-[410px] iphone:bottom-[550px] flex-col justify-center'>
                     <div className='flex justify-center items-center flex-col'>
                         <span className='sm:flex text-center'>
                             <span>{isEng ? 'Discover your' : 'የእርስዎን'}</span>
