@@ -5,6 +5,8 @@
 @keyframes fade-in {
     from {
         opacity: 0;
+        background-color: #000000;
+        background-color:rgb(135, 139, 94);
     }
 
     to {

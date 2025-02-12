@@ -41,13 +41,13 @@ export default function Blog() {
                         <Link key={post.id} to={`/blog/${post.id}`} className="bg-secondary rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
                             <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
                             <div className="p-4">
-                                <h2 className="text-2xl text-black font-semibold mb-2">
+                                <h2 className="text-2xl text-white font-bold mb-2">
                                     {isEng ? post.title : 'የቤት ገበን ስርዓት ይወስዳል'} {/* Placeholder translation */}
                                 </h2>
-                                <p className="text-gray-700 mb-3">
+                                <p className="text-gray-200 mb-3">
                                     {isEng ? post.excerpt : 'የቤት ምርት እና የቤት ውስጥ ተመልክቶ ይወስዳል'} {/* Placeholder translation */}
                                 </p>
-                                <p className="text-gray-800 text-sm">{post.date}</p>
+                                <p className="text-gray-300 text-sm">{post.date}</p>
                             </div>
                         </Link>
                     ))}

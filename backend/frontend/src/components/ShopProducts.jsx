@@ -51,9 +51,9 @@ export default function Products() {
     };
 
     return (
-        <div className='flex justify-center items-center p-3 flex-col'>
+        <div className='flex justify-center items-center p-3 px-0  flex-col'>
             {/* Category Navigation */}
-            <div className='flex font-pbold w-full text-black gap-3 mb-4'>
+            <div className='flex justify-center font-bold w-full text-black gap-3 mb-4'>
                 {types.map((type, index) => (
                     <div
                         key={index}
@@ -72,7 +72,7 @@ export default function Products() {
                 classNames="fade"
                 unmountOnExit
             >
-                <TransitionGroup className='flex mt-6 md:justify-between justify-center flex-wrap'>
+                <TransitionGroup className='flex  mt-6 md:justify-between gap-2 justify-center flex-wrap'>
                     {currentItems.map((product, index) => (
                         <CSSTransition
                             key={index}

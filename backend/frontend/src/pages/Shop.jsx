@@ -39,7 +39,7 @@ export default function Shop() {
                 </div>
             </div>
 
-            <div className='md:p-[11%] p-[6%] pb-10 mb-5 bg-third pt-10'>
+            <div className='md:p-[11%] p-[6%] pb-10 mb-5 bg-secondary pt-10'>
                 <div className=''>
                     <div className='text-4xl text-black font-semibold'>
                         {isEng ? 'Our Best Selling Products' : 'የምርጥ የሚሸጡ ምርቶች'}

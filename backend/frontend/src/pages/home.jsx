@@ -39,11 +39,11 @@ export default function Home() {
     return (
         <div>
             <div className='sm:h-fit h-[700px]'>
-                <img src={homeimg} className='w-full sm:block hidden mt-8 rounded-3xl' alt="" />
+                <img src={homeimg} className='w-full start:hidden  md:block mt-8 ' alt="" />
                 <img src={homePhone} className='w-full sm:hidden block mt-8' alt="" />
 
                 <h1 className='sm:flex text-gray-800 sm:mt-0 mt-10 text-5xl md:text-7xl font-bold items-center relative bottom-[410px] iphone:bottom-[550px] flex-col justify-center'>
-                    <div className='flex justify-center items-center flex-col'>
+                    <div className='flex justify-center text-[#353d17] items-center flex-col'>
                         <span className='sm:flex text-center'>
                             <span>{isEng ? 'Discover your' : 'የእርስዎን'}</span>
                             <span className='sm:ml-3 sm:flex sm:mt-0 sm:mb-0 mt-3 mb-3 block'>{isEng ? 'Perfect' : 'ትክክለኛ ቦታ'}</span>
@@ -74,9 +74,9 @@ export default function Home() {
                     <ProductCard hidden={true} img={couch} name={isEng ? 'Sleek Bar Stool' : 'የውስጥ ቡና ቦታ'} price={12000} discription={isEng ? 'Add a touch of sophistication with modern bar stools.' : 'የውስጥ ቡና ቦታ ጋር የውስጥ አስተዳደር ይጨምሩ።'} />
                 </div>
 
-                <div className='pt-10 flex flex-wrap gap-4 sm:gap:0 justify-between'>
-                    <img className='sm:w-[52%] rounded-2xl h-[380px]' src={home3} alt="" />
-                    <div className='sm:w-[46%] w-full pt-16 px-5 text-white bg-secondary rounded-2xl h-[380px]'>
+                <div className='pt-10 flex w-full start:px-5 flex-wrap start:justify-center gap-4 mr-8 sm:gap:0 sm:justify-between'>
+                    <img className='sm:w-[52%] rounded-xl h-[380px]' src={home3} alt="" />
+                    <div className='sm:w-[46%] w-full pt-16 px-5 text-white bg-secondary rounded-xl h-[380px]'>
                         <h1 className='text-[34px] pb-5'>{isEng ? 'Get your own Furniture' : 'የእርስዎን ቁጥር ይወዳድሩ'}</h1>
                         <p className='text-slate-200 text-[14px]'>
                             {isEng
@@ -112,7 +112,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className='mt-10'>
+                <div className='mt-10 '>
                     <h1 className='text-4xl mb-5 font-pextrabold text-black'>{isEng ? 'Our Products' : 'የእኛ ምርቶች'}</h1>
                     <div className='flex sm:justify-between justify-center flex-wrap'>
                         {/* {products.map((product) => (

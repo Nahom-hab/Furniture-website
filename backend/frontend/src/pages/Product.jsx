@@ -5,8 +5,12 @@ import product2 from '../assets/images/product-2.png';
 import product3 from '../assets/images/product-3.png';
 import Footer from '../components/Footer';
 import useLanguage from '../zustand/useConversationStore';
+import { useParams } from 'react-router-dom';
 
 export default function Product() {
+    const { id } = useParams()
+    console.log(id);
+
     const { isEng } = useLanguage();
     const [selectedImage, setSelectedImage] = useState(product2);
     const thumbnails = [product2, product3, product2];

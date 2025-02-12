@@ -2,10 +2,11 @@ import img1 from '../images/couch.png';
 import img2 from '../images/product-1.png';
 import img3 from '../images/product-2.png';
 import img4 from '../images/product-3.png';
+import imgg from '../images/home.jpeg';
 
 
 const Productdata = [
-    { name: 'Gray Brown Couch', img: img1, price: 6000, type: 'Living Room' },
+    { name: 'Gray Brown Couch', img: imgg, price: 6000, type: 'Living Room' },
     { name: 'Modern White Chair', img: img2, price: 1200, type: 'Dining Room' },
     { name: 'Rustic Coffee Table', img: img3, price: 800, type: 'Living Room' },
     { name: 'Elegant Dining Set', img: img4, price: 2500, type: 'Dining Room' },

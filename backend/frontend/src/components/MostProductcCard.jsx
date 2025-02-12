@@ -10,7 +10,7 @@ export default function MostProductCard({ name, img, price, discountedPrice, sta
             <img src={img} className='md:w-[227px] w-[155px] md:h-[178px] object-cover rounded-2xl' alt={name} />
             <div className='flex justify-between items-center'>
                 <div className='md:text-[22px] font-semibold'>{name}</div>
-                <div className='flex items-center text-[#7b7e61]'>
+                <div className='flex items-center text-black'>
                     {star} <img className='lg:w-6 w-4' src={star_icon} alt="Star Rating" />
                 </div>
             </div>
@@ -19,11 +19,11 @@ export default function MostProductCard({ name, img, price, discountedPrice, sta
                     <div className='md:text-[24px] text-[14px] text-slate-800'>
                         {discountedPrice}<span className='text-[13px] ml-[-4px]'> birr</span>
                     </div>
-                    <div className='text-[10px] text-[#7b7e61] mb-[4px] line-through'>
+                    <div className='text-[10px] text-black mb-[4px] line-through'>
                         {price} {isEng ? 'birr' : 'ቢር'}
                     </div>
                 </div>
-                <div className='lg:text-[12px] flex items-end text-[10px] mt-2 text-[#7b7e61]'>
+                <div className='lg:text-[12px] flex items-end text-[10px] mt-2 text-black'>
                     {isEng ? '2 Days Delivery' : '2 ቀን የመውጣት'}
                 </div>
             </div>

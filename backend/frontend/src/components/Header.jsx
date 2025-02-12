@@ -42,9 +42,9 @@ export default function Header() {
         <div className='lg:px-8 px-3 text-black pt-4 flex justify-between items-center'>
             <div className='font-extrabold text-2xl md:text-3xl'>Furnish</div>
 
-            <div className='flex items-center gap-32'>
+            <div className='flex z-50 items-center gap-32'>
                 {/* Desktop Navigation Links */}
-                <div className='lg:flex items-center hidden gap-8'>
+                <div className='start:hidden md:flex items-center gap-8'>
                     <NavLink to="/" end className={({ isActive }) => `${linkStyle} ${isActive ? activeStyle : ''}`}>
                         {isEng ? 'Home' : 'መነሻ'}
                     </NavLink>

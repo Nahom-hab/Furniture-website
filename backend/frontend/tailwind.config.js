@@ -9,7 +9,8 @@ export default {
     extend: {
       screens: {
         'iphone': '390px',
-        'sam': '360px'
+        'sam': '360px',
+        'start': '0px'
       },
       colors: {
         primary: "#C8C3A7",
@@ -17,8 +18,8 @@ export default {
           DEFAULT: "#949778"
         },
         third: {
-          DEFAULT: "#ADA990",
-          100: "#1E1E2D",
+          DEFAULT: "#232533",
+          100: "#000000",
           200: "#232533",
         },
         gray: {
